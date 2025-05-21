@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>In the Area – Villa Nika</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; font-family: 'Roboto', sans-serif; background: #fff; color: #333; }
+    header { background: white; border-bottom: 1px solid #eee; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    nav a { margin: 0 1rem; text-decoration: none; color: #365e78; font-weight: bold; }
+    .hero {
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent), url('https://www.amadriapark.com/wp-content/uploads/sites/5/2019/08/villa-angiolina.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 70vh;
+      display: flex;
+      align-items: flex-end;
+      padding: 2rem;
+      color: white;
+    }
+    .hero-text { max-width: 900px; }
+    .hero-text h1 { font-family: 'Montserrat', sans-serif; margin-bottom: 1rem; }
+    .hero-text p { font-size: 1.1rem; line-height: 1.6; }
+    section.content { max-width: 1100px; margin: 3rem auto; padding: 0 2rem; }
+    h2.section-title { color: #365e78; font-family: 'Montserrat', sans-serif; margin-top: 2.5rem; cursor: pointer; background: #f0f0f0; padding: 1rem; border-radius: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.05); display: flex; align-items: center; justify-content: space-between; }
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
+    .card {
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      padding: 1rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.6s ease forwards;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .card h4 { margin-top: 0; color: #365e78; }
+    .card p { font-size: 0.95rem; line-height: 1.4; }
+    .card a { display: inline-block; margin-top: 0.5rem; color: #365e78; text-decoration: none; font-weight: bold; }
+    .card a:hover { text-decoration: underline; }
+    .card img { width: 100%; border-radius: 6px; margin-bottom: 0.5rem; }
+    .section-toggle { display: none; }
+    .arrow { font-size: 1.2rem; transform: rotate(0deg); transition: transform 0.3s ease; }
+    .arrow.open { transform: rotate(90deg); }
+    footer { text-align: center;
+    text-transform: uppercase; padding: 2rem; background-color: #F5F5F5; margin-top: 4rem; }
+    footer img { max-height: 40px; margin-bottom: 0.5rem; }
+    .social-icons a { margin: 0 0.5rem; color: #365e78; text-decoration: none; font-size: 1.2rem; }
+  </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-pbVbkK6Z9rWZ8q3Wqd9jMKJQp9sZqrzEqg14UQ1z9TwvR4Lu1eX9jcoAD0vL8/X/I9IViPt9uSNEdR8Uht9xjw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+</style>
+</head>
+<body>
+<header>
+  <nav>
+    <a href="noble.html">Home</a>
+    <a href="arrival.html">Arrival Information</a>
+    <a href="house.html">House Information</a>
+    <a href="area.html">In the Area</a>
+  </nav>
+</header>
+<section class="hero">
+  <div class="hero-text">
+    <h1>IN THE AREA</h1>
+    <p>Explore the city with ease by clicking on your preferred category.<br>Each section opens to reveal curated suggestions with essential information.<br>For personalized tips, feel free to contact our Hospitality team.</p>
+  </div>
+</section>
+<section class="content">
+  <h2 class="section-title" onclick="toggleSection('restaurants')">Restaurants <span class="arrow" id="arrow-restaurants">➤</span></h2>
+  <div class="card-grid section-toggle" id="restaurants">
+    <div class="card"><h4>Restaurant A</h4><p>Lorem ipsum dolor sit amet.</p></div>
+  </div>
+
+  <h2 class="section-title" onclick="toggleSection('beaches')">Beaches <span class="arrow" id="arrow-beaches">➤</span></h2>
+  <div class="card-grid section-toggle" id="beaches">
+    <div class="card"><h4>Slatina Beach</h4><p>Lorem ipsum dolor sit amet.</p></div>
+  </div>
+
+  <h2 class="section-title" onclick="toggleSection('bars')">Bars & Coffee Shops <span class="arrow" id="arrow-bars">➤</span></h2>
+  <div class="card-grid section-toggle" id="bars">
+    <div class="card"><h4>Bar Example</h4><p>Lorem ipsum dolor sit amet.</p></div>
+  </div>
+
+  <h2 class="section-title" onclick="toggleSection('supermarkets')">Supermarkets <span class="arrow" id="arrow-supermarkets">➤</span></h2>
+  <div class="card-grid section-toggle" id="supermarkets">
+    <div class="card"><h4>Lidl</h4><p>Lorem ipsum dolor sit amet.</p></div>
+  </div>
+
+  <h2 class="section-title" onclick="toggleSection('parking')">Parking <span class="arrow" id="arrow-parking">➤</span></h2>
+  <div class="card-grid section-toggle" id="parking">
+    <div class="card"><h4>Slatina Public</h4><p>Lorem ipsum dolor sit amet.</p></div>
+  </div>
+
+  <h2 class="section-title" onclick="toggleSection('laundry')">Laundry Rooms <span class="arrow" id="arrow-laundry">➤</span></h2>
+  <div class="card-grid section-toggle" id="laundry">
+    <div class="card"><h4>Laundry Lav</h4><p>Lorem ipsum dolor sit amet.</p></div>
+  </div>
+
+  <h2 class="section-title" onclick="toggleSection('health')">Health <span class="arrow" id="arrow-health">➤</span></h2>
+  <div class="card-grid section-toggle" id="health">
+    <div class="card"><h4>Medical Center</h4><p>Lorem ipsum dolor sit amet.</p></div>
+  </div>
+
+  <h2 class="section-title" onclick="toggleSection('sights')">Sights <span class="arrow" id="arrow-sights">➤</span></h2>
+  <div class="card-grid section-toggle" id="sights">
+    <div class="card"><h4>Park Angiolina</h4><p>Lorem ipsum dolor sit amet.</p></div>
+  </div>
+
+  <h2 class="section-title" onclick="toggleSection('towns')">Towns to Explore <span class="arrow" id="arrow-towns">➤</span></h2>
+  <div class="card-grid section-toggle" id="towns">
+    <div class="card"><h4>Lovran</h4><p>Lorem ipsum dolor sit amet.</p></div>
+  </div>
+  
+  </div>
+</section>
+<footer>
+  <img src="https://irundo.com/wp-content/themes/irundo/assets/logo.svg" alt="Irundo Logo" />
+  <p>www.irundo.com | info@irundo.com | +385 99 624 6437</p>
+  <div class="social-icons">
+    <a href="https://www.instagram.com/irundoapartments/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/irundo/" target="_blank"><i class="fab fa-facebook"></i></a>
+  </div>
+</footer>
+<script>
+  function toggleSection(id) {
+    const section = document.getElementById(id);
+    const arrow = document.getElementById('arrow-' + id);
+    if (section.style.display === 'grid') {
+      section.style.display = 'none';
+      arrow.classList.remove('open');
+    } else {
+      section.style.display = 'grid';
+      arrow.classList.add('open');
+    }
+  }
+</script>
+</body>
+</html>

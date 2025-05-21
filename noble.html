@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noble Riviera Villa Nika</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #FFFFFF;
+      color: #333;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      background: white;
+      border-bottom: 1px solid #eee;
+      z-index: 1000;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #365e78;
+      font-weight: bold;
+    }
+    .lang-toggle {
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: #365e78;
+      font-weight: bold;
+    }
+    .hero {
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent), url('https://irundo.com/wp-content/uploads/2025/02/nika160.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      padding: 2rem;
+      color: white;
+    }
+    .hero-text {
+      max-width: 100%;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .hero-text h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .hero-buttons {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .hero-buttons a {
+      background-color: #365e78;
+      color: white;
+      text-decoration: none;
+      padding: 0.75rem 1.25rem;
+      border-radius: 5px;
+      display: inline-block;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 768px) {
+      .hero-text {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 1rem;
+        border-radius: 10px;
+      }
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #F5F5F5;
+    }
+    footer img {
+      max-height: 40px;
+      margin-bottom: 0.5rem;
+    }
+    .social-icons a {
+      margin: 0 0.5rem;
+      color: #365e78;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+  .sticky-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 999;
+}
+.sticky-buttons a {
+  background-color: #365e78;
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 0;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  font-size: 0.85rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+</style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <div>
+      <nav>
+        <a href="noble.html">Home</a>
+        <a href="arrival.html">Arrival Information</a>
+        <a href="house.html">House Information</a>
+        <a href="area.html">In the Area</a>
+      </nav>
+    </div>
+    <button class="lang-toggle" onclick="toggleLanguage()">HR</button>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <p>WELCOME TO</p>
+      <h1>Noble Riviera Villa Nika</h1>
+      <p>Kolavići ulica 29, Veprinac</p>
+      <div class="hero-buttons">
+        <a href="arrival.html">Arrival Information</a>
+        <a href="house.html">House Information</a>
+        <a href="area.html">In the Area</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <img src="https://irundo.com/wp-content/themes/irundo/assets/logo.svg" alt="Irundo Logo" />
+    <p>www.irundo.com | info@irundo.com | +385 99 624 6437</p>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/irundoapartments/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/irundo/" target="_blank"><i class="fab fa-facebook"></i></a>
+    </div>
+  </footer>
+<div class="sticky-buttons">
+  <a href="https://noblerivieravillas.book.rentl.io/" target="_blank">BOOK AGAIN</a>
+  <a href="https://irundo.com/en/apartment/noble-riviera-villa-nika/" target="_blank">OFFICIAL WEBSITE</a>
+  <a href="https://wa.me/385996246437" target="_blank">CONTACT</a>
+</div>
+
+  <script>
+    let currentLang = 'en';
+    function toggleLanguage() {
+      currentLang = currentLang === 'en' ? 'hr' : 'en';
+      document.querySelectorAll('[data-en]').forEach(el => {
+        el.textContent = el.getAttribute(`data-${currentLang}`);
+      });
+      document.querySelector('.lang-toggle').textContent = currentLang.toUpperCase() === 'EN' ? 'HR' : 'EN';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrival & Departure – Villa Nika</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; font-family: 'Roboto', sans-serif; background: #fff; color: #333; }
+    header { background: white; border-bottom: 1px solid #eee; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    nav a { margin: 0 1rem; text-decoration: none; color: #365e78; font-weight: bold; }
+    h1, h2 { font-family: 'Montserrat', sans-serif; }
+    .hero {
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent), url('https://irundo.com/wp-content/uploads/2025/02/noble129.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 75vh;
+      display: flex;
+      align-items: flex-end;
+      color: white;
+      padding: 2rem;
+    }
+    .hero-text {
+      max-width: 800px;
+      animation: fadeIn 2s ease-in-out;
+      
+      padding: 1.5rem;
+      border-radius: 12px;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    section.content {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+    .accordion-toggle {
+      font-weight: bold;
+      cursor: pointer;
+      padding: 1rem;
+      background-color: #f0f0f0;
+      border: none;
+      width: 100%;
+      text-align: left;
+      margin-top: 1.5rem;
+      border-radius: 5px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+    .accordion-content {
+      display: none;
+      padding: 1rem;
+      background-color: #fafafa;
+      border-left: 3px solid #365e78;
+      border-radius: 0 0 5px 5px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      margin-top: 1rem;
+      border-radius: 5px;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #F5F5F5;
+      margin-top: 4rem;
+    }
+    footer img {
+      max-height: 40px;
+      margin-bottom: 0.5rem;
+    }
+    .social-icons a {
+      margin: 0 0.5rem;
+      color: #365e78;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="noble.html">Home</a>
+      <a href="arrival.html">Arrival Information</a>
+      <a href="house.html">House Information</a>
+      <a href="area.html">In the Area</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Arrival & Departure Information</h1>
+      <p>Hello and welcome to Noble Riviera Villa Nika! Below you'll find all essential information regarding your arrival, parking, check-in, and departure process.</p>
+    </div>
+  </section>
+
+  <section class="content">
+    <button class="accordion-toggle">Arrival Information</button>
+    <div class="accordion-content">
+      <p><strong>Villa Location:</strong> Kolavići ulica 29, Veprinac</p>
+      <iframe src="https://www.google.com/maps?q=Kolavi%C4%87i+ulica+29,+Veprinac&output=embed"></iframe>
+      <p><strong>Check-in Time:</strong> from 16:00 (4 PM)<br>Your house will be ready after 16:00 on the start date of your reservation. If you would like to arrive earlier - please let us know and we will check our availability.<br>Our host will greet you and give you the keys/codes and show you around. If you haven't completed the online registration, please present your IDs to the host upon arrival.</p>
+      <p><strong>Parking:</strong> You can park at one of the five parking spots in front of the house. To open the parking gate, use code <strong>258#</strong> or the remote from the keybox.</p>
+    </div>
+
+    <button class="accordion-toggle">House Rules</button>
+    <div class="accordion-content">
+      <p><strong>Check-In and Check-Out:</strong><br>Check-in: 16:00h (4 PM)<br>Check-out: 10:00h (10 AM)<br>Please inform us of your estimated times in advance.</p>
+      <p><strong>Noise and Disturbance:</strong><br>Respect our neighbors and observe quiet hours: 1 PM–5 PM and 10 PM–10 AM. No parties/events allowed.</p>
+      <p><strong>Smoking:</strong> Not allowed inside. Use designated outdoor areas and dispose properly.</p>
+      <p><strong>Pets:</strong> Not allowed on the property.</p>
+      <p><strong>Occupancy:</strong> Only registered guests may stay. Max 6 guests total.</p>
+      <p><strong>Cleanliness & Damages:</strong> Keep the villa clean. Report issues. Guests are liable for damages.</p>
+      <p><strong>Security:</strong> Lock all doors/windows when leaving. Do not share access code.</p>
+      <p><strong>Pool & Outdoor:</strong> Use responsibly. No glass by the pool. Kids must be supervised.</p>
+      <p><strong>Kitchen Use:</strong> Clean after use. Avoid leaving out food.</p>
+      <p><strong>Waste:</strong> Dispose of trash in designated bins.</p>
+      <p><strong>Emergency Contact:</strong> Please contact the host immediately in case of emergency.</p>
+    </div>
+
+    <button class="accordion-toggle">Departure Information</button>
+    <div class="accordion-content">
+      <p>Check-out is at <strong>10:00h (10 AM)</strong>, unless agreed otherwise.</p>
+      <p><strong>Before leaving, please:</strong></p>
+      <ul>
+        <li>Close and lock all windows</li>
+        <li>Log out of your apps on the TV</li>
+        <li>Load dirty dishes in the dishwasher</li>
+        <li>Take out garbage and recycling</li>
+        <li>Check for all belongings</li>
+        <li>Leave keys in the keybox</li>
+      </ul>
+      <p>Kindly notify us once you depart so we can alert our cleaning team. Thank you!</p>
+    </div>
+  </section>
+
+  <footer>
+    <img src="https://irundo.com/wp-content/themes/irundo/assets/logo.svg" alt="Irundo Logo" />
+    <p>www.irundo.com | info@irundo.com | +385 99 624 6437</p>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/irundoapartments/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/irundo/" target="_blank"><i class="fab fa-facebook"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    const toggles = document.querySelectorAll('.accordion-toggle');
+    toggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const content = toggle.nextElementSibling;
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
+</body>
+</html>
