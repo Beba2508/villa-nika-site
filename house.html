@@ -6,144 +6,158 @@
   <title>House Information – Villa Nika</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
   <style>
-    body { margin: 0; font-family: 'Roboto', sans-serif; background: #f9f9f9; color: #333; }
+    body { margin: 0; font-family: 'Roboto', sans-serif; background: #fff; color: #333; }
     header { background: white; border-bottom: 1px solid #eee; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
     nav a { margin: 0 1rem; text-decoration: none; color: #365e78; font-weight: bold; }
+    section { max-width: 800px; margin: 3rem auto; padding: 0 2rem; }
+    h1, h2 { font-family: 'Montserrat', sans-serif; }
+    .accordion-toggle { font-weight: bold; cursor: pointer; padding: 1rem; background-color: #f0f0f0; border: none; width: 100%; text-align: left; margin-top: 1rem; border-radius: 5px; }
+    .accordion-content { display: none; padding: 1rem; background-color: #fafafa; border-left: 3px solid #365e78; border-radius: 0 0 5px 5px; }
     .hero {
-      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent), url('https://irundo.com/wp-content/uploads/2025/02/nika160.jpg');
-      background-size: cover;
-      background-position: center;
-      height: 70vh;
-      display: flex;
-      align-items: flex-end;
-      padding: 2rem;
-      color: white;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent), url('https://irundo.com/wp-content/uploads/2025/02/nika160.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    align-items: flex-end;
+    padding: 2rem;
+    color: white;
+  }
+  .hero-text {
+    max-width: 800px;
+  }
+  .hero-text h1 { font-family: 'Montserrat', sans-serif; margin-bottom: 0.5rem; }
+  .hero-text p { font-size: 1.1rem; line-height: 1.6; }
+  .nav-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .nav-wrap a {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.95rem;
+    white-space: nowrap;
+  }
+  @media screen and (max-width: 600px) {
+    .nav-wrap {
+      flex-direction: column;
+      align-items: center;
     }
-    .hero-text {
-      max-width: 800px;
+  }
+</style>
+<style>
+  .sticky-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    z-index: 1000;
+  }
+  .sticky-buttons a {
+    background-color: #365e78;
+    color: white;
+    padding: 0.6rem 0.8rem;
+    font-weight: 600;
+    font-size: 0.75rem;
+    border-radius: 0;
+    text-decoration: none;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    text-transform: uppercase;
+    text-align: center;
+    white-space: nowrap;
+  }
+  @media screen and (max-width: 600px) {
+    .sticky-buttons {
+      bottom: 10px;
+      right: 10px;
+      flex-direction: row;
     }
-    .hero-text h1 { font-family: 'Montserrat', sans-serif; margin-bottom: 0.5rem; }
-    .hero-text p { font-size: 1.1rem; line-height: 1.6; }
-    section.content {
-      max-width: 1000px;
-      margin: 3rem auto;
-      padding: 0 2rem;
+    .sticky-buttons a {
+      font-size: 0.7rem;
+      padding: 0.5rem 0.6rem;
     }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-    .accordion-toggle {
-      font-weight: bold;
-      cursor: pointer;
-      padding: 1rem;
-      background-color: #f0f0f0;
-      border: none;
-      width: 100%;
-      text-align: left;
-      border-radius: 5px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    }
-    .accordion-content {
-      display: none;
-      padding: 1rem;
-      background-color: #fff;
-      border-left: 3px solid #365e78;
-      border-radius: 0 0 5px 5px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: #F5F5F5;
-      margin-top: 4rem;
-    }
-    footer img { max-height: 40px; margin-bottom: 0.5rem; }
-    .social-icons a {
-      margin: 0 0.5rem;
-      color: #365e78;
-      text-decoration: none;
-      font-size: 1.2rem;
-    }
-  </style>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  }
+</style>
+  .sticky-buttons a {
+    background-color: #365e78;
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 0;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    font-size: 0.85rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+</style>
 </head>
 <body>
   <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="arrival.html">Arrival Information</a>
-      <a href="house.html">House Information</a>
-      <a href="area.html">In the Area</a>
-    </nav>
-  </header>
+  <nav class="nav-wrap">
+    <a href="index.html">Home</a>
+    <a href="arrival.html">Arrival Information</a>
+    <a href="house.html">House Information</a>
+    <a href="area.html">In the Area</a>
+  </nav>
+</header>
 
   <section class="hero">
-    <div class="hero-text">
-      <h1>House Information</h1>
-      <p>We're thrilled to have you here and hope you enjoy a relaxing and memorable stay. We’ve prepared everything you need – from check-in instructions to house features – all just a click away. If you need anything else, don’t hesitate to reach out to us.</p>
-      <p><strong>Please click on each section to access the information:</strong></p>
+  <div class="hero-text">
+    <h1>House Information</h1>
+    <p>We're thrilled to have you here and hope you enjoy a relaxing and memorable stay. We’ve prepared everything you need – from check-in instructions to house features – all just a click away. If you need anything else, don’t hesitate to reach out to us.</p>
+    <p><strong>Please click on each section to access the information:</strong></p>
+  </div>
+</section>
+
+<section>
+    <h1>House Information</h1>
+    <p>Welcome to Noble Riviera Villa Nika. Below you'll find helpful information about your stay.</p>
+
+    <button class="accordion-toggle">Heating and Cooling</button>
+    <div class="accordion-content">
+      <p><strong>Heating:</strong> You can see the apartment temperature on the wall thermostat. To increase the temperature, turn on the A/C using the black control panel in the living room.</p>
+      <p><strong>Cooling:</strong> Use the black control panel in the living room. In the bedroom, press the power button on the remote, select the cooling flake icon, then adjust temperature and fan.</p>
+    </div>
+
+    <button class="accordion-toggle">Internet</button>
+    <div class="accordion-content">
+      <p>Wifi password is printed inside the villa.</p>
+    </div>
+
+    <button class="accordion-toggle">TV</button>
+    <div class="accordion-content">
+      <p>Smart TV is available in every bedroom and in the living room.</p>
+    </div>
+
+    <button class="accordion-toggle">Trash and Recycling</button>
+    <div class="accordion-content">
+      <p>Lorem ipsum trash details.</p>
+    </div>
+
+    <button class="accordion-toggle">Kitchen</button>
+    <div class="accordion-content">
+      <p>Lorem ipsum kitchen information.</p>
+    </div>
+
+    <button class="accordion-toggle">Barbecue and Fireplace</button>
+    <div class="accordion-content">
+      <p>Lorem ipsum barbecue details.</p>
+    </div>
+
+    <button class="accordion-toggle">Emergency Contacts</button>
+    <div class="accordion-content">
+      <p>Lorem ipsum emergency contacts.</p>
+    </div>
+
+    <button class="accordion-toggle">Social Media</button>
+    <div class="accordion-content">
+      <p>Lorem ipsum social media links.</p>
     </div>
   </section>
-
-  <section class="content">
-    <div class="grid">
-      <div>
-        <button class="accordion-toggle">WiFi</button>
-        <div class="accordion-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </div>
-      <div>
-        <button class="accordion-toggle">TV</button>
-        <div class="accordion-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </div>
-      <div>
-        <button class="accordion-toggle">Heating and Cooling</button>
-        <div class="accordion-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </div>
-      <div>
-        <button class="accordion-toggle">Barbecue</button>
-        <div class="accordion-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </div>
-      <div>
-        <button class="accordion-toggle">Swimming Pool</button>
-        <div class="accordion-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </div>
-      <div>
-        <button class="accordion-toggle">Jacuzzi</button>
-        <div class="accordion-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </div>
-      <div>
-        <button class="accordion-toggle">Sauna</button>
-        <div class="accordion-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </div>
-      <div>
-        <button class="accordion-toggle">Kitchen</button>
-        <div class="accordion-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <img src="https://irundo.com/wp-content/themes/irundo/assets/logo.svg" alt="Irundo Logo" />
-    <p>www.irundo.com | info@irundo.com | +385 99 624 6437</p>
-    <div class="social-icons">
-      <a href="https://www.instagram.com/irundoapartments/" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.facebook.com/irundo/" target="_blank"><i class="fab fa-facebook"></i></a>
-    </div>
-  </footer>
 
   <script>
     const toggles = document.querySelectorAll('.accordion-toggle');
@@ -154,5 +168,10 @@
       });
     });
   </script>
+<div class="sticky-buttons">
+  <a href="https://noblerivieravillas.book.rentl.io/" target="_blank">BOOK AGAIN</a>
+  <a href="https://irundo.com/en/apartment/noble-riviera-villa-nika/" target="_blank">OFFICIAL WEBSITE</a>
+  <a href="https://wa.me/385996246437" target="_blank">CONTACT</a>
+</div>
 </body>
 </html>
